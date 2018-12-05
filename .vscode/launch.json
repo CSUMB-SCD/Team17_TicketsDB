@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TicketsdbApplication",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "cst438team17.ticketsdb.TicketsdbApplication",
+            "args": "",
+            "projectName": "ticketsdb"
+        }
+    ]
+}
