@@ -24,8 +24,13 @@ public class TicketDBSeeder implements CommandLineRunner{
         ConcertTicket thestrokes = new ConcertTicket(new Artist("The Strokes"), new Date("1/13/19"), new Venue("SAP Center"), 10);
         ConcertTicket tameimpala = new ConcertTicket(new Artist("Tame Impala"), new Date("3/4/19"), new Venue("Fox Theater"), 10);
         ConcertTicket martingarrix = new ConcertTicket(new Artist("Martin Garrix"), new Date("1/2/19"), new Venue("The Regency Ballroom"), 10);
+        ConcertTicket ICP = new ConcertTicket(new Artist("Insane Clown Posse"), new Date("5/26/19"), new Venue("Shoreline Ampitheatre"), 10);
+        ConcertTicket cagetheelephant = new ConcertTicket(new Artist("Cage The Elephant"), new Date("1/2/19"), new Venue("The Regency Ballroom"), 10);
+        ConcertTicket kendricklamar = new ConcertTicket(new Artist("Kendrick Lamar"), new Date("12/6/18"), new Venue("The Regency Ballroom"), 10);
+
+
         ticketRepo.deleteAll();
-        List<ConcertTicket> concerts = Arrays.asList(twentyonepilots, eminem, thestrokes, tameimpala, martingarrix);
+        List<ConcertTicket> concerts = Arrays.asList(twentyonepilots, eminem, thestrokes, tameimpala, martingarrix, ICP, cagetheelephant, kendricklamar);
         ticketRepo.saveAll(concerts);
     }
 
