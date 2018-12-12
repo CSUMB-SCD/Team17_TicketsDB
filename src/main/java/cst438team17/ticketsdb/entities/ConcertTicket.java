@@ -11,16 +11,16 @@ public class ConcertTicket {
     private String date;
     private String venue;
     private int quantity;
-    private int numberOfTickets;
+    private int stock;
     private int price;
     private String description;
 
-    public ConcertTicket(String artist, String date, String venue, int quantity, int numberOfTickets, int price, String description) {
+    public ConcertTicket(String artist, String date, String venue, int quantity, int stock, int price, String description) {
         this.artist = artist;
         this.date = date;
         this.venue = venue;
         this.quantity = quantity;
-        this.numberOfTickets = numberOfTickets;
+        this.stock = stock;
         this.price = price; 
         this.description = description;
     }
@@ -65,12 +65,12 @@ public class ConcertTicket {
         return quantity;
     }
 
-    public void setNumberOfTickets (int numberOfTickets) {
-        this.numberOfTickets = numberOfTickets;
+    public void setStock (int stock) {
+        this.stock = stock;
     }
 
-    public int getNumberOfTickets() {
-        return numberOfTickets;
+    public int getStock() {
+        return stock;
     }
 
     public void setPrice (int price) {
