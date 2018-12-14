@@ -39,6 +39,7 @@ public class HeroController {
 		if (ticketData.isPresent()) {
             ConcertTicket _ticket = ticketData.get();
             _ticket.setStock(ticket.getStock());
+            System.out.println("updated stock is: " + _ticket.getStock());
             return new ResponseEntity<>(ticketRepo.save(_ticket), HttpStatus.OK);
 		} else {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
