@@ -31,7 +31,7 @@ public class HeroController {
         return result;
     }
 
-    @PostMapping ("/id/{id}")
+    @PutMapping ("/id/{id}")
     public ResponseEntity<ConcertTicket> updateTicket(@PathVariable("id") String id, @RequestBody ConcertTicket ticket) {
  
 		Optional<ConcertTicket> ticketData = ticketRepo.findById(id);
@@ -39,7 +39,7 @@ public class HeroController {
 		if (ticketData.isPresent()) {
             ConcertTicket _ticket = ticketData.get();
             _ticket.setStock(ticket.getStock());
-			return new ResponseEntity<>(ticketRepo.save(_ticket), HttpStatus.OK);
+            return new ResponseEntity<>(ticketRepo.save(_ticket), HttpStatus.OK);
 		} else {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
