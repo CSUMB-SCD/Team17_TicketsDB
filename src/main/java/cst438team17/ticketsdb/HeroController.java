@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,7 +31,7 @@ public class HeroController {
         return result;
     }
 
-    @PutMapping ("/id/{id}")
+    @PostMapping ("/id/{id}")
     public ResponseEntity<ConcertTicket> updateTicket(@PathVariable("id") String id, @RequestBody ConcertTicket ticket) {
  
 		Optional<ConcertTicket> ticketData = ticketRepo.findById(id);
